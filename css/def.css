@@ -1,0 +1,23 @@
+.webitel_call {
+    width: 26px;
+    height: 26px;
+}
+.webitel_make_call {
+    background:  url("../img/call.png");
+}
+.webitel_progress_call {
+    background:  url("../img/ring.png");
+}
+
+.webitel_active_call {
+    background:  url("../img/active.png");
+}
+
+.webitel_quick_video {
+    width: 0px;
+    height: 0px;
+}
+
+.webitel_quick_block {
+    width: 26px;
+}

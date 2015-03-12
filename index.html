@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link type="text/css" rel="stylesheet" href="css/def.css">
+</head>
+
+<body>
+
+  <script src="js/Call.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="js/jquery-json.js"></script>
+  <script src="js/verto.js"></script>
+  <div id="call_id"></div>
+  <script>
+    var callSuite1 = new WebitelQuickCall({
+        renderTo: 'call_id',
+        callNumber: '00',
+        vertoConf: {
+          server: 'wss://pre.webitel.com:8082',
+          login: '100@10.10.10.144',
+          passwd: '100'
+        }
+    })
+  </script>
+
+
+</body>
+</html>
