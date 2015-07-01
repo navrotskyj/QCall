@@ -1,3 +1,4 @@
+
 WebitelQuickCall = function (param) {
     param = param || {};
     var quickOutgoingMediaElement = 'quickMediaElement';
