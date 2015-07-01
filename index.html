@@ -13,12 +13,17 @@
   <div id="call_id"></div>
   <script>
     var callSuite1 = new WebitelQuickCall({
+        theme: "red",
         renderTo: 'call_id',
         callNumber: '00',
+//        callNumber: 'webitel_in',
         vertoConf: {
           server: 'wss://pre.webitel.com:8082',
+//          server: 'wss://switch-d1.webitel.com:8082',
           login: '100@10.10.10.144',
+//          login: 'webitel.ua@switch-d1.webitel.com',
           passwd: '100'
+//          passwd: 'T9j5BlK8aX'
         }
     })
   </script>

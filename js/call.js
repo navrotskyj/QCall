@@ -2,6 +2,7 @@ WebitelQuickCall = function (param) {
     param = param || {};
     var quickOutgoingMediaElement = 'quickMediaElement';
     var $btnQuickCall = null;
+    var theme = param['theme'] || '';
 
     var activeCall = null;
     var quickWebrtcPhone = null;
@@ -14,7 +15,7 @@ WebitelQuickCall = function (param) {
 
         var $img = $('<div>', {
             id: 'webitel_quick_btn',
-            class: 'webitel_call webitel_make_call',
+            class: 'webitel_call webitel_make_call ' + theme,
             click: function () {
 
                 if (!$btnQuickCall) $btnQuickCall = $(this);
@@ -61,7 +62,7 @@ WebitelQuickCall = function (param) {
                     case $.verto.enum.state.recovering:
                         break;
                     case $.verto.enum.state.ringing:
-                        $btnQuickCall.removeClass().addClass('webitel_call webitel_progress_call');
+                        $btnQuickCall.removeClass().addClass('webitel_call webitel_progress_call' + theme);
                         console.log('verto.enum.state.ringing');
                         break;
 
@@ -70,11 +71,11 @@ WebitelQuickCall = function (param) {
 
                     case $.verto.enum.state.early:
                     case $.verto.enum.state.active:
-                        $btnQuickCall.removeClass().addClass('webitel_call webitel_active_call');
+                        $btnQuickCall.removeClass().addClass('webitel_call webitel_active_call' + theme);
                         break;
 
                     case $.verto.enum.state.hangup:
-                        $btnQuickCall.removeClass().addClass('webitel_call webitel_make_call');
+                        $btnQuickCall.removeClass().addClass('webitel_call webitel_make_call' + theme);
                         console.log('verto.enum.state.hangup');
                         break;
                     case $.verto.enum.state.destroy:
@@ -122,7 +123,7 @@ WebitelQuickCall = function (param) {
 
     var initializeQuickCall = function (param) {
         initializeQuickCallView(param.renderTo);
-    }
+    };
 
     initializeQuickCall(param);
     return {

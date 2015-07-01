@@ -1,17 +1,20 @@
 .webitel_call {
-    width: 26px;
-    height: 26px;
-}
-.webitel_make_call {
-    background:  url("../img/call.png");
-}
-.webitel_progress_call {
-    background:  url("../img/ring.png");
+    width: 100%;
+    height: 100%;
 }
 
-.webitel_active_call {
-    background:  url("../img/active.png");
+.webitel_call.webitel_make_call.red{
+    background:  url("../img/thm_red.png") no-repeat;
+    background-size: 125px 95px;
 }
+.webitel_call.webitel_progress_call.red{
+    background:  url("../img/thm_red.png");
+}
+
+.webitel_call.webitel_active_call.red{
+    background:  url("../img/thm_red.png");
+}
+
 
 .webitel_quick_video {
     width: 0px;
@@ -19,5 +22,5 @@
 }
 
 .webitel_quick_block {
-    width: 26px;
+    width: auto;
 }
